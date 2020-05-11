@@ -8,22 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		B166FE772469D371000EBB00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B166FE762469D371000EBB00 /* AppDelegate.swift */; };
-		B166FE792469D371000EBB00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B166FE782469D371000EBB00 /* ViewController.swift */; };
+		B166FE792469D371000EBB00 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B166FE782469D371000EBB00 /* MainVC.swift */; };
 		B166FE7C2469D371000EBB00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B166FE7A2469D371000EBB00 /* Main.storyboard */; };
 		B166FE7F2469D371000EBB00 /* DocFlow.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B166FE7D2469D371000EBB00 /* DocFlow.xcdatamodeld */; };
 		B166FE812469D374000EBB00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B166FE802469D374000EBB00 /* Assets.xcassets */; };
 		B166FE842469D374000EBB00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B166FE822469D374000EBB00 /* LaunchScreen.storyboard */; };
+		B166FE8F2469D416000EBB00 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B166FE8E2469D416000EBB00 /* NetworkService.swift */; };
+		B166FE922469D474000EBB00 /* DocFlowTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B166FE912469D474000EBB00 /* DocFlowTask.swift */; };
+		B166FE942469D48D000EBB00 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B166FE932469D48D000EBB00 /* APIError.swift */; };
+		B166FE962469DDA1000EBB00 /* DocFlowTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B166FE952469DDA1000EBB00 /* DocFlowTaskCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B166FE732469D371000EBB00 /* DocFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DocFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B166FE762469D371000EBB00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B166FE782469D371000EBB00 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B166FE782469D371000EBB00 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		B166FE7B2469D371000EBB00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B166FE7E2469D371000EBB00 /* DocFlow.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DocFlow.xcdatamodel; sourceTree = "<group>"; };
 		B166FE802469D374000EBB00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B166FE832469D374000EBB00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B166FE852469D374000EBB00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B166FE8E2469D416000EBB00 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		B166FE912469D474000EBB00 /* DocFlowTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocFlowTask.swift; sourceTree = "<group>"; };
+		B166FE932469D48D000EBB00 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		B166FE952469DDA1000EBB00 /* DocFlowTaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocFlowTaskCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +64,11 @@
 		B166FE752469D371000EBB00 /* DocFlow */ = {
 			isa = PBXGroup;
 			children = (
+				B166FE902469D425000EBB00 /* model */,
+				B166FE8D2469D3CB000EBB00 /* view */,
+				B166FE8C2469D3BF000EBB00 /* controller */,
+				B166FE8B2469D3AF000EBB00 /* service */,
 				B166FE762469D371000EBB00 /* AppDelegate.swift */,
-				B166FE782469D371000EBB00 /* ViewController.swift */,
 				B166FE7A2469D371000EBB00 /* Main.storyboard */,
 				B166FE802469D374000EBB00 /* Assets.xcassets */,
 				B166FE822469D374000EBB00 /* LaunchScreen.storyboard */,
@@ -65,6 +76,39 @@
 				B166FE7D2469D371000EBB00 /* DocFlow.xcdatamodeld */,
 			);
 			path = DocFlow;
+			sourceTree = "<group>";
+		};
+		B166FE8B2469D3AF000EBB00 /* service */ = {
+			isa = PBXGroup;
+			children = (
+				B166FE8E2469D416000EBB00 /* NetworkService.swift */,
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		B166FE8C2469D3BF000EBB00 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				B166FE782469D371000EBB00 /* MainVC.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		B166FE8D2469D3CB000EBB00 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B166FE952469DDA1000EBB00 /* DocFlowTaskCell.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		B166FE902469D425000EBB00 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				B166FE912469D474000EBB00 /* DocFlowTask.swift */,
+				B166FE932469D48D000EBB00 /* APIError.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +182,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B166FE792469D371000EBB00 /* ViewController.swift in Sources */,
+				B166FE922469D474000EBB00 /* DocFlowTask.swift in Sources */,
+				B166FE792469D371000EBB00 /* MainVC.swift in Sources */,
+				B166FE962469DDA1000EBB00 /* DocFlowTaskCell.swift in Sources */,
 				B166FE7F2469D371000EBB00 /* DocFlow.xcdatamodeld in Sources */,
+				B166FE8F2469D416000EBB00 /* NetworkService.swift in Sources */,
 				B166FE772469D371000EBB00 /* AppDelegate.swift in Sources */,
+				B166FE942469D48D000EBB00 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
